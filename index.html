@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+        </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="form-group">
+        <input type="text" class="form-control" id="input-city">
+            </div>
+            <button type="submit" class="btn btn-info btn-block">
+                Rechercher
+            </button>
+        </form>
+
+        <div class="meteo">
+            <p class="city">Montpellier</p>
+            <p class="temperature">14°</p>
+            <p class="temps">Ensoleillé</p>
+            <p class="maxmin">Max. 15° Min. 9°</p>
+        </div>
+        <div class="air-quality">
+            <p class="header">QUALITÉ DE L'AIR</p>
+            <p class="quality">Mauvaise</p>
+            <p class="description">La qualité de l'air est la même qu'hier à peu près à la même heure.</p>
+            <meter id="jauge" value="7" min="0" max="10"></meter>
+            <p class="informations">Plus d'informations...</p>
+        </div>
+        <div class="previsions-hour">
+            <p class="header"></i>🕦 PRÉVISIONS HEURE PAR HEURE</p>
+            <div class="hours">
+            <div class="h-actual">
+                <p class="actual">Maintenant</p>
+                <p class="actual-temps">☀️</p>
+                <p class="actuel-temperature">14°</p>
+            </div>
+            <div class="hPlus1">
+                <p class="h-1">11h</p>
+                <p class="h1-temps">☀️</p>
+                <p class="h1-temperature">14°</p>
+            </div>
+            <div class="hPlus2">
+                 <p class="h-2">12h</p>
+                <p class="h2-temps">☀️</p>
+                <p class="h2-temperature">14°</p>
+            </div>
+            <div class="hPlus3">
+                <p class="h-3">13h</p>
+                <p class="h3-temps">☀️</p>
+                <p class="h3-temperature">14°</p>
+            </div>
+            <div class="hPlus4">
+                <p class="h-4">14h</p>
+                <p class="h4-temps">☀️</p>
+                <p class="h4-temperature">14°</p>
+            </div>
+            <div class="hPlus5">
+                <p class="h-5">15h</p>
+                <p class="h5-temps">☀️</p>
+                <p class="h5-temperature">14°</p>
+            </div>
+            <div class="hPlus6">
+                <p class="h-6">16h</p>
+                <p class="h6-temps">☀️</p>
+                <p class="h6-temperature">14°</p>
+            </div>
+            <div class="hPlus7">
+                <p class="h-7">17h</p>
+                <p class="h7-temps">☀️</p>
+                <p class="h7-temperature">14°</p>
+            </div>
+            <div class="hPlus8">
+                <p class="h-8">18h</p>
+                <p class="h-8temps">☀️</p>
+                <p class="h-8temperature">14°</p>
+            </div>
+            <div class="hPlus9">
+                <p class="h-9">19h</p>
+                <p class="h9-temps">☀️</p>
+                <p class="h9-temperature">14°</p>
+            </div>
+            <div class="hPlus10">
+                <p class="h-10">20h</p>
+                <p class="h10-temps">☀️</p>
+                <p class="h10-temperature">14°</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="plan-qualite">
+            <p class="header">PLAN QUALITÉ DE L'AIR</p>
+            <map name="carte"></map>
+            <p class="infos">Plus d'informations...</p>
+        </div>
+
+        <div class="previsions10j">
+            <p class="header">🗓 PRÉVISIONS SUR 10 JOURS</p>
+            <div class="auj">
+                <p class="jour">Auj.</p>
+                <p class="temps-auj">☀️</p>
+                
+                <div class="minmaxauj">
+                <p class="temps-min-auj">5°</p>
+                <meter value="7" min="0" max="10"></meter>
+                <p class="temps-max">14°</p>
+                </div>
+            </div>
+
+            <div class="j1">
+                <p class="jour">Ven.</p>
+                <p class="temps-j1">☀️</p>
+                
+                <div class="minmaxj1">
+                <p class="temps-min-j1">3°</p>
+                <meter value="7" min="0" max="10"></meter>
+                <p class="temps-max">12°</p>
+                </div>
+            </div>
+
+            <div class="j2">
+                <p class="jour">Sam.</p>
+                <p class="temps-j2">🌧</p>
+                
+                <div class="minmaxj2">
+                <p class="temps-min-j2">9°</p>
+                <meter value="7" min="0" max="10"></meter>
+                <p class="temps-max">18°</p>
+                </div>
+            </div>
+
+            <div class="j3">
+                <p class="jour">Dim.</p>
+                <p class="temps-j3">☁</p>
+                
+                <div class="minmaxj3">
+                <p class="temps-min-j3">7°</p>
+                <meter value="7" min="0" max="10"></meter>
+                <p class="temps-max">14°</p>
+                </div>
+            </div>
+
+            <div class="j4">
+                <p class="jour">Lun.</p>
+                <p class="temps-j4">☀️</p>
+                
+                <div class="minmaxj4">
+                <p class="temps-min-j4">8°</p>
+                <meter value="7" min="0" max="10"></meter>
+                <p class="temps-max">19°</p>
+                </div>
+            </div>
+
+            <div class="j5">
+                <p class="jour">Mar.</p>
+                <p class="temps-j5">🌩</p>
+                <div class="minmaxj5">
+                <p class="temps-min-j5">10°</p>
+                <meter value="7" min="0" max="10"></meter>
+                <p class="temps-max">21°</p>
+                </div>
+            </div>
+
+            <div class="j6">
+                <p class="jour">Mer.</p>
+                <p class="temps-j6">☀️</p>
+                
+                <div class="minmaxj6">
+                <p class="temps-min-j6">6°</p>
+                <meter value="7" min="0" max="10"></meter>
+                <p class="temps-max">15°</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
